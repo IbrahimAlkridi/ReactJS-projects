@@ -1,0 +1,52 @@
+:root {
+  /* Span / Highlight Background Gradient */
+  --gradient-span-bg: linear-gradient(135deg, #793221, #feb47b, #b78f16);
+
+  /* Primary Text Gradient */
+  --gradient-primary-text: linear-gradient(90deg, #6adfff, #045fcf, #00eeff);
+
+  /* Secondary Text Gradient (lighter / subtle) */
+  --gradient-secondary-text: linear-gradient(90deg, #a0a0a0, #dcb2b268, #e0e0e0);
+}
+
+.container {
+  display: flex;
+  /* horizontal layout */
+  align-items: center;
+  /* vertically center icon & input */
+  width: 350px;
+  /* adjust as needed */
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* On focus of input, highlight container */
+.container:focus-within {
+  border-color: rgb(50, 143, 187);
+  box-shadow: 0 0 8px rgba(181, 217, 255, 0.612);
+}
+
+/* Search icon */
+.container img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Input field */
+#input {
+  flex: 1;
+  /* take remaining space */
+  border: none;
+  /* remove default border */
+  outline: none;
+  /* remove default focus outline */
+  font-size: 16px;
+  background-color: transparent;
+  /* match container bg */
+}
