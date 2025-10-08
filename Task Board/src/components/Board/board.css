@@ -1,0 +1,14 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+
+    min-width: 75%;
+    margin: 0 12%;
+    height: 100vh;
+    border: var(--border-color) 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: 2s ease all;
+}

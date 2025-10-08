@@ -1,0 +1,108 @@
+.back-drop-modal {
+    /* color: var(--text-color); */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dim the background */
+    display: flex;
+    /* center child modal */
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+    /* horizontal center */
+    z-index: 1000;
+    /* on top */
+    backdrop-filter: blur(2px);
+    /* optional blur */
+
+}
+
+.modal {
+    background: var(--bg-color, #fff);
+    /* light by default, switchable */
+    color: var(--text-color, #000);
+    /* theme text color */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    /* responsive: almost full width */
+    max-width: 500px;
+    /* but never too wide */
+    max-height: 90vh;
+    /* avoids overflowing screen */
+    overflow-y: auto;
+    /* scroll if content is tall */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal .close-btn {
+    border: none;
+    overflow: none;
+    padding: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    /* margin-left: auto; */
+}
+
+.modal .close-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.modal .close-btn:hover {
+    background-color: red;
+}
+
+.modal .inp {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-color, #222);
+    background: var(--input-bg, #fff);
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal .inp::placeholder {
+    color: var(--input-placeholder, #888);
+    font-size: 0.95rem;
+}
+
+.modal .inp:focus {
+    border-color: var(--input-focus-border, #4a90e2);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+}
+
+#add-btn {
+    color: var(--text-color);
+    width: 20%;
+    margin-left: auto;
+    border: 2px solid var(--main-color);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}

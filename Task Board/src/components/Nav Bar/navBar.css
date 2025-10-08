@@ -1,0 +1,46 @@
+.bar {
+    font-family: var(--font-family);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    width: 70%;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2px;
+    border: var(--main-color) 1px solid;
+    cursor: pointer;
+    padding: 9px;
+    border-radius: 999px;
+    background-color: var(--bg-color);
+    transition: hover .35s ease;
+}
+
+button:hover {
+    scale: 1.05;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: rgb(0, 0, 0, 0.2);
+    color: var(--icon-color);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+}
+
+.nav-btn {
+    color: var(--text-color);
+}
+
+.icon:hover,
+.nav-btn:hover {
+    color: var(--icon-hover-c)
+}

@@ -1,0 +1,45 @@
+
+
+A To-do app (Priority Board)
+
+Features:
+- Dark/Light Mode
+- Prioritize (high, Medium, Low )
+- DeadLine
+- Tasks are Saved in Local storage
+
+
+Page's Layout: 
+- Mode button to switch theme color Dark/Light
+- Header & Nav includes: "Task Board" & under it a "add Task" btn & "delete all tasks" btn 
+- Board where it includes the task's Cards 4 cols for pc screen 1 for phone screen
+ 
+Card's Layout: 
+- Deadline 
+- Task's content 
+- Checkbox 
+- Delete icon
+- Priority tag
+
+Add Task Btn Functionality: 
+When user clicks the taskBtn a Modal appears will be located in the middle of the page.
+    Modal's Layout: 
+        - Task Name
+        - Priority 
+        - set DeadLine
+        - "Add" button
+
+
+
+Problems 
+1- Can't handle mode-toggle-button properly
+
+
+
+
+
+
+
+
+
+

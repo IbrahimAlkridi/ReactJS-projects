@@ -1,0 +1,26 @@
+:root {
+    /* Font */
+    --font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+
+    /* Light theme */
+    --text-color: #1F2937;
+    --bg-color: #F9FAFB;
+    --border-color: #E5E7EB;
+    --main-color: #3B82F6;
+    --icon-color: #1F2937;
+    --icon-hover-c: #E5E7EB;
+    --input-bg: #F9FAFB;
+}
+
+
+[data-theme="dark"] {
+    --text-color: #F3F4F6;
+    --bg-color: #111827;
+    --border-color: #374151;
+    --main-color: #3B82F6;
+    --icon-color: #E5E7EB;
+    --icon-hover-c: #374151;
+    --input-bg: rgba(116, 132, 149, 0.71);
+
+}
