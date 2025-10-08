@@ -95,3 +95,16 @@ h3.done {
 .task-card.delete {
     display: none;
 }
+
+
+@media (max-width: 480px) {
+    .task-card {
+        min-height: 180px;
+    }
+
+    .priority {
+        padding: 0.1rem 0.4rem;
+        font-weight: 500;
+    }
+
+}

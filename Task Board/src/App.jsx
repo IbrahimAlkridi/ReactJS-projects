@@ -6,6 +6,7 @@ import Modal from "./components/Task Modal/Modal.jsx";
 import ModeToggle from "./components/Mode Toggle Button/ModeToggle.jsx";
 import Header from "./components/Header/Header.jsx";
 import Board from "./components/Board/Board.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
         <Header />
         <NavBar setAllTasks={setAllTasks} isModalActive={isModalActive} setModal={setModal} />
         <Board allTasks={allTasks} setAllTasks={setAllTasks} />
+        <Footer />
         {isModalActive && <Modal allTasks={allTasks} setAllTasks={setAllTasks} setModal={setModal} isModalActive={isModalActive} />}
 
       </div>

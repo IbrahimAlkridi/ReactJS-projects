@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 10px;
+    gap: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     width: 90%;
@@ -58,6 +58,12 @@
     /* margin-left: auto; */
 }
 
+.modal form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
 .modal .close-btn img {
     width: 30px;
     height: 30px;
@@ -78,6 +84,15 @@
     border-radius: 8px;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.priority-section div {
+    display: inline-block;
+    padding: 10px;
+}
+
+.priority-section div label {
+    padding: 8px;
 }
 
 .modal .inp::placeholder {
@@ -105,4 +120,10 @@
 .hide {
     opacity: 0;
     transform: translateY(-20px);
+}
+
+@media (max-width: 480px) {
+    .modal .inp {}
+
+
 }

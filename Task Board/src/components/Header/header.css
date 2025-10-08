@@ -2,3 +2,9 @@ header {
     color: var(--text-color);
 
 }
+
+@media (max-width:480px) {
+    header {
+        margin-top: 30px;
+    }
+}

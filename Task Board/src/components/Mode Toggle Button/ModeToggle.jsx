@@ -7,7 +7,7 @@ import darkToggle from '../../assets/black-toggle.svg'
 const ModeToggle = () => {
     const [isDefMode, setMode] = useState(() => {
 
-        return localStorage.getItem("mode").toLowerCase() === "true";
+        return localStorage.getItem("mode") === "true";
     })
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const ModeToggle = () => {
     }, [isDefMode])
 
     useEffect(() => {
-        { (localStorage.getItem("mode").toLowerCase() === "true") ? setLight() : setDark() }
+        { (localStorage.getItem("mode") === "true") ? setLight() : setDark() }
 
     }, [])
 

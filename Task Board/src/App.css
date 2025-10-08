@@ -18,3 +18,7 @@
   align-items: center;
   row-gap: 10px;
 }
+
+.page {
+  overflow: auto;
+}

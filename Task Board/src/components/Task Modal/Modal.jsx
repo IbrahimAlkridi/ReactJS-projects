@@ -67,7 +67,7 @@ const Modal = ({ isModalActive, setModal, allTasks, setAllTasks }) => {
                         onChange={(e) => setTaskValue(e.target.value)}
                         value={taskValue}
                         required
-                        maxLength="80"
+                        maxLength="70"
                     />
 
                     <div className="priority-section" onChange={handleRadios}>
