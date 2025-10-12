@@ -96,10 +96,19 @@ h3.done {
     display: none;
 }
 
+.deadline {
+    font-size: 20px;
+}
+
 
 @media (max-width: 480px) {
     .task-card {
-        min-height: 180px;
+        min-height: 190px;
+        margin: 0;
+    }
+
+    .actions .deadline {
+        font-size: 10px;
     }
 
     .priority {

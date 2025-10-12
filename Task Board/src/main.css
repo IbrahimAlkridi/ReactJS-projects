@@ -24,3 +24,7 @@
     --input-bg: rgba(116, 132, 149, 0.71);
 
 }
+
+body {
+    overflow-x: hidden;
+}

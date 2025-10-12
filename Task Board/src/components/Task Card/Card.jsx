@@ -17,33 +17,44 @@ const Card = ({ taskId, title, priority, time, isDone, setAllTasks }) => {
 
 
 
+    useEffect(() => {
+        const handleDeadline = () => {
+            if (time === '') {
+                setDeadline("No Deadline");
+                return
+            }
+            let now = new Date();
 
-    const handleDeadline = useEffect(() => {
-        let now = new Date();
+            //  time format = "01.14"
+            let [hours, mins] = time.split(':').map(Number);
+            let taskTime = new Date();
+            taskTime.setHours(hours, mins, 0, 0);
 
-        //  time format = "01.14"
-        let [hours, mins] = time.split(':').map(Number);
-        let taskTime = new Date();
-        taskTime.setHours(hours, mins, 0, 0);
+            if (taskTime < now) {
+                taskTime.setDate(taskTime.getDate() + 1);
+            }
+            let msDiff = taskTime - now;
+            let minsDiff = Math.floor(msDiff / 1000 / 60);
 
-        if (taskTime < now) {
-            taskTime.setDate(taskTime.getDate() + 1);
+
+            let deadMins = minsDiff % 60;
+            let deadHours = Math.floor(minsDiff / 60);
+
+            setDeadline(
+                deadHours === 0 && deadMins === 0 ? "it's over" :
+                    `${deadHours !== 0 ? deadHours + " hrs " : ""}${deadMins} mins`
+            )
+
+
+
+
         }
-        let msDiff = taskTime - now;
-        let minsDiff = Math.floor(msDiff / 1000 / 60);
+        handleDeadline(); // run it once
+        const interval = setInterval(handleDeadline, 60000); // optional: auto update each min
+        return () => clearInterval(interval);
 
+    }, [time])
 
-        let deadMins = minsDiff % 60;
-        let deadHours = Math.floor(minsDiff / 60);
-
-        return (
-            <p>
-                {deadHours !== 0 && <p> {deadHours} hrs</p>}
-                {deadMins !== 0 && <p> {deadMins} mins</p>}
-                {/* {deadMins} mins */}
-            </p>
-        )
-    }, [new Date().getMinutes()])
 
 
 
@@ -86,7 +97,7 @@ const Card = ({ taskId, title, priority, time, isDone, setAllTasks }) => {
                     // - exceeding the deadline -> make it redMessage "time is over"
 
                 }
-                <p className="deadline">⏰ {handleDeadline()}</p>
+                <p className="deadline">⏰ {deadline}</p>
 
             </div>
             <button className="delete-btn" onClick={onDelete}>

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     color: var(--text-color);
     background-color: var(--bg-color);
     width: 70%;
@@ -45,10 +46,37 @@ button:hover {
     color: var(--icon-hover-c)
 }
 
+#myProgress {
+    width: 50%;
+    height: 30px;
+    background-color: grey;
+    border-radius: 0.4rem;
+}
+
+#myBar {
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: width .6s ease;
+}
+
+#myBar span {
+    padding: 0 10px;
+}
+
 @media (max-width:480px) {
     .bar {
         width: 95%;
     }
 
-
+    #myProgress {
+        width: 30%;
+        height: 20px;
+        background-color: grey;
+        border-radius: 0.4rem;
+    }
 }

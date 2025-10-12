@@ -27,7 +27,6 @@
 
 @media (max-width: 480px) {
     .board {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: .5 rem;
+        grid-template-columns: repeat(1, minmax(160px, 1fr));
     }
 }

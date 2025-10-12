@@ -34,7 +34,7 @@ const App = () => {
 
         <ModeToggle />
         <Header />
-        <NavBar setAllTasks={setAllTasks} isModalActive={isModalActive} setModal={setModal} />
+        <NavBar setAllTasks={setAllTasks} isModalActive={isModalActive} setModal={setModal} allTasks={allTasks} />
         <Board taskCounter={taskCounter} allTasks={allTasks} setAllTasks={setAllTasks} />
         <Footer />
         {isModalActive && <Modal allTasks={allTasks} setAllTasks={setAllTasks} setModal={setModal} isModalActive={isModalActive} />}
