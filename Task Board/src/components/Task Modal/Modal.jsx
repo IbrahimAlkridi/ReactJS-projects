@@ -94,7 +94,7 @@ const Modal = ({ isModalActive, setModal, allTasks, setAllTasks }) => {
                             name="date"
                             value={date}
                             onChange={handleDate}
-                            required
+
                         />
                     </div>
 

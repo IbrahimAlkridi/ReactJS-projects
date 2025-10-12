@@ -5,10 +5,24 @@
     padding: 1rem;
     min-width: 75%;
     margin: 0 12%;
+    height: 100vh;
     border: var(--border-color) 1px solid;
     box-shadow: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     transition: 2s ease all;
+    position: relative;
+}
+
+.task-counter {
+    position: absolute;
+    padding-bottom: 5px;
+    left: -19px;
+    top: 2px;
+    rotate: -55deg;
+    font-size: 14px;
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: 700;
 }
 
 @media (max-width: 480px) {

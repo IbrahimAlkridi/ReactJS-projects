@@ -1,15 +1,16 @@
 import React from 'react'
+import '../../main.css'
 import './board.css'
 import Card from '../Task Card/Card.jsx'
 import { useState, useEffect } from 'react'
 
 
-const Board = ({ allTasks, setAllTasks }) => {
+const Board = ({ allTasks, setAllTasks, taskCounter }) => {
 
     return (
         <div className="board" >
             {/* includes the Cards & label (tracks num of tasks top center) */}
-
+            <p className='task-counter'>{taskCounter} Tasks!</p>
             {
 
                 allTasks.map(task => (
