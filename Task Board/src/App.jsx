@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './main.css'
 import "./App.css";
 import NavBar from "./components/Nav Bar/NavBar.jsx";
@@ -7,14 +7,14 @@ import ModeToggle from "./components/Mode Toggle Button/ModeToggle.jsx";
 import Header from "./components/Header/Header.jsx";
 import Board from "./components/Board/Board.jsx";
 import Footer from "./components/Footer/footer.jsx";
+import TaskContext from "./context/TaskContext.jsx";
+
 
 const App = () => {
 
+  const { allTasks, setAllTasks } = useContext(TaskContext);
   const [isModalActive, setModal] = useState(false);
-  const [allTasks, setAllTasks] = useState(() => {
-    const saved = localStorage.getItem("tasks");
-    return saved ? JSON.parse(saved) : [];
-  });
+
   const [taskCounter, setTaskCounter] = useState(allTasks.length);
 
   useEffect(() => {
@@ -29,19 +29,17 @@ const App = () => {
 
 
   return (
-    <>
-      <div className="page" >
+    <div className="page" >
 
-        <ModeToggle />
-        <Header />
-        <NavBar setAllTasks={setAllTasks} isModalActive={isModalActive} setModal={setModal} allTasks={allTasks} />
-        <Board taskCounter={taskCounter} allTasks={allTasks} setAllTasks={setAllTasks} />
-        <Footer />
-        {isModalActive && <Modal allTasks={allTasks} setAllTasks={setAllTasks} setModal={setModal} isModalActive={isModalActive} />}
+      <ModeToggle />
+      <Header />
+      <NavBar isModalActive={isModalActive} setModal={setModal} />
+      <Board taskCounter={taskCounter} />
+      <Footer />
+      {isModalActive && <Modal setModal={setModal} isModalActive={isModalActive} />}
 
-      </div>
+    </div>
 
-    </>
   );
 };
 

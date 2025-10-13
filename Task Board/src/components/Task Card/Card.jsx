@@ -1,12 +1,13 @@
 import React from 'react'
 import '../../main.css'
 import './card.css';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
+import TaskContext from "../../context/TaskContext.jsx";
 
 
-const Card = ({ taskId, title, priority, time, isDone, setAllTasks }) => {
+const Card = ({ taskId, title, priority, time, isDone }) => {
 
-
+    const { allTasks, setAllTasks } = useContext(TaskContext);
     const taskText = useRef(null);
     const card = useRef(null)
     const checkBox = useRef(null)

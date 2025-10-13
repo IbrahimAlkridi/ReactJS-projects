@@ -1,13 +1,16 @@
-import { React, useRef, useState } from 'react'
+import { useRef, useState, useContext } from 'react'
 import '../../main.css'
 import './modal.css'
 import closeBtn from '../../assets/close.svg';
+import TaskContext from "../../context/TaskContext.jsx";
 
-const Modal = ({ isModalActive, setModal, allTasks, setAllTasks }) => {
+
+const Modal = ({ isModalActive, setModal }) => {
     const modal = useRef(null);
     const [taskValue, setTaskValue] = useState('');
     const [priority, setPriority] = useState('');
     const [date, setDate] = useState('');
+    const { allTasks, setAllTasks } = useContext(TaskContext);
 
     const closeModal = () => {
         if (isModalActive) setModal(false);

@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useContext } from 'react'
 import '../../main.css'
 import './navBar.css';
 import PlusIcon from '../../assets/plus.svg?react';
 import GarbageIcon from '../../assets/garbage.svg?react';
-const NavBar = ({ isModalActive, allTasks, setModal, setAllTasks }) => {
+import TaskContext from "../../context/TaskContext.jsx";
 
+const NavBar = ({ isModalActive, setModal }) => {
+    const { allTasks, setAllTasks } = useContext(TaskContext);
     const [progress, setProgress] = useState(0);
     const proBar = useRef();
 

@@ -2,10 +2,12 @@ import React from 'react'
 import '../../main.css'
 import './board.css'
 import Card from '../Task Card/Card.jsx'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import TaskContext from "../../context/TaskContext.jsx";
 
 
-const Board = ({ allTasks, setAllTasks, taskCounter }) => {
+const Board = ({ taskCounter }) => {
+    const { allTasks, setAllTasks } = useContext(TaskContext);
 
     return (
         <div className="board" >
