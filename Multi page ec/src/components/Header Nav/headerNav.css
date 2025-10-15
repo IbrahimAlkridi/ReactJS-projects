@@ -1,0 +1,275 @@
+:root {
+    --bg-color: #32465a;
+    --txt-color: #fff;
+    --accent-color: #f2c94c;
+}
+
+/* ----------------------------
+   TOP BAR (ALWAYS VISIBLE)
+----------------------------- */
+#top-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.main-container {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 3em;
+    position: relative;
+}
+
+.dropp-btn {
+    background: none;
+    color: var(--bg-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    /* 6px */
+    cursor: pointer;
+    font-size: 0.8125rem;
+    /* 13px */
+    font-weight: 600;
+    color: var(--txt-color);
+
+}
+
+.dropp-btn span {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.drop-menu-lang {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 3em;
+    background-color: var(--bg-color);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    /* 4px 8px */
+    border: 0.0625rem solid silver;
+    /* 1px */
+    border-radius: 0.25rem;
+    /* 4px */
+    min-width: 9.375rem;
+    /* 150px */
+    overflow: hidden;
+    z-index: 10;
+}
+
+.drop-menu-lang.active {
+    display: block;
+}
+
+.drop-menu-lang li {
+    padding: 0.5rem 0.75rem;
+    /* 8px 12px */
+    cursor: pointer;
+}
+
+.drop-menu-lang li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.title h5 {
+    font-size: 0.875rem;
+
+
+    /* margin-right: auto; */
+    /* 14px */
+}
+
+/* ----------------------------
+   MAIN HEADER (DESKTOP)
+----------------------------- */
+.main-header {
+    background: #fff;
+    border-bottom: 0.0625rem solid silver;
+    /* 1px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9375rem 3.75rem;
+    /* 15px 60px */
+    position: relative;
+}
+
+.logo-img span {
+    font-size: 1.75rem;
+    font-family: cursive;
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.nav-links li,
+.dropp-btn-cat {
+    display: inline-block;
+    padding: 0.5rem 0.625rem;
+    /* 8px 10px */
+    font-size: 0.8125rem;
+    /* 13px */
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+.nav-links li:hover,
+.nav-links .dropp-btn-cat:hover {
+    color: var(--accent-color);
+}
+
+.dropp-btn-cat {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
+
+.dropp-btn-cat span {
+    font-size: 0.6rem;
+}
+
+.nav-drop-menu-cat {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+    top: 4rem;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    border-radius: 0.375rem;
+    /* 6px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    /* 4px 8px */
+    padding: 0.5rem 0;
+    /* 8px */
+    min-width: 9.375rem;
+    /* 150px */
+}
+
+.nav-drop-menu-cat.active {
+    display: flex;
+}
+
+.nav-drop-menu-cat li:not(:last-child) {
+    border-bottom: 0.0625rem solid silver;
+    /* 1px */
+}
+
+.nav-drop-menu-cat li {
+    width: 100%;
+}
+
+.nav-drop-menu-cat li:hover {
+    background-color: var(--accent-color);
+}
+
+.nav-drop-menu-cat li a {
+    color: var(--txt-color);
+    text-decoration: none;
+    text-align: start;
+}
+
+.shop-now-btn {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    padding: 0.5rem 1.125rem;
+    /* 8px 18px */
+    border-radius: 1.25rem;
+    /* 20px */
+    font-weight: 600;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.shop-now-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* ----------------------------
+   MOBILE MENU
+----------------------------- */
+.menu-icon {
+    display: none;
+    font-size: 1.625rem;
+    /* 26px */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bg-color);
+}
+
+/* Hidden by default */
+.mobile-nav {
+    display: none;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    z-index: 99;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav li {
+    padding: 0.625rem 0;
+    /* 10px */
+}
+
+/* ----------------------------
+   RESPONSIVE BEHAVIOR
+----------------------------- */
+@media (max-width: 48rem) {
+    html {
+        font-size: 14px;
+    }
+
+    /* 768px */
+    .main-header {
+        justify-content: space-between;
+        padding: 0.625rem 1.25rem;
+        /* 10px 20px */
+        flex-direction: column;
+
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+
+
+    .shop-now-btn {
+        display: block;
+    }
+
+    /* Keep top bar visible */
+    .main-container {
+        display: flex;
+    }
+
+    .nav-drop-menu-cat {
+        position: absolute;
+        top: 5rem;
+    }
+
+}

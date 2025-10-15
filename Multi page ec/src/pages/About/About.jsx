@@ -1,0 +1,17 @@
+import React from 'react'
+
+const About = () => {
+    return (
+        <>
+            <div>About</div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda incidunt numquam iusto saepe nam, sint praesentium doloremque accusamus architecto natus? Architecto eveniet explicabo optio facere mollitia amet consequuntur asperiores! Reprehenderit accusantium accusamus minus harum voluptas aliquid animi nihil rem voluptatem illo nobis minima provident libero nesciunt praesentium illum ducimus inventore eveniet temporibus rerum repudiandae, expedita modi eaque? Est dicta nemo illum repudiandae obcaecati sed modi, explicabo dolore! Reprehenderit eligendi nemo numquam fuga laboriosam doloremque officiis ex? Maiores doloribus necessitatibus laboriosam ad eos odit omnis reprehenderit asperiores maxime incidunt illo tenetur sed amet, distinctio laborum quas aspernatur, harum ipsa culpa at eum! Recusandae repellat quis aperiam necessitatibus tenetur iure suscipit, explicabo quod accusamus doloribus ullam dolorum iste corrupti amet ut sed asperiores debitis quas eveniet inventore, dolorem cumque facere perspiciatis! Aliquid et, libero, vel saepe in ab nulla ullam dolorem expedita id architecto nemo beatae repellat minima doloribus aspernatur numquam ipsum? Vel obcaecati, in veniam, voluptas voluptate doloremque eius sapiente nesciunt eum explicabo pariatur facilis voluptates dignissimos necessitatibus minima fugiat recusandae officia ut voluptatibus hic officiis aperiam amet doloribus! Optio, ex veniam. Nulla exercitationem ad quas harum beatae cupiditate dolores aut pariatur? Similique totam vel, consequuntur, cumque ea officiis nisi qui at perspiciatis natus, maiores dicta facere repudiandae. Qui inventore, totam, rem quam dolorem veritatis esse eaque consectetur, corrupti amet iusto rerum molestiae. Impedit in architecto totam vero, odit ratione suscipit, repudiandae aliquam nam deleniti iure aut dolores libero. Reiciendis et natus facilis modi perspiciatis quidem, placeat at saepe magnam aut voluptate nesciunt recusandae laboriosam, commodi unde, eos repellat officiis culpa corrupti excepturi? Ipsa in sunt delectus molestias fuga! Sed dolorem aliquam molestias perspiciatis ullam cumque incidunt repudiandae architecto saepe repellat, amet commodi magnam minima est enim recusandae facere facilis excepturi illo dolorum. Aperiam accusamus natus, ullam excepturi consectetur ex sapiente voluptatum accusantium quos, eligendi quas magni, quia blanditiis id fugiat veniam dolores soluta quasi. Voluptatibus nesciunt eaque necessitatibus facere officiis! Eius aperiam nihil debitis ipsam eaque? Ea veritatis illum sapiente eaque dolore inventore, soluta, eveniet nihil aut ad ipsum incidunt dicta culpa, obcaecati suscipit optio expedita. Illo corrupti rem sed explicabo nemo magni asperiores deserunt minima rerum necessitatibus illum inventore nisi voluptate, reprehenderit molestias voluptatem quis autem sapiente voluptates mollitia sunt ipsa. Non fugiat sapiente consectetur libero adipisci vel unde quidem inventore ea aperiam, recusandae, cupiditate natus assumenda facilis delectus quia cumque minus praesentium, temporibus voluptate esse. Nesciunt, velit obcaecati?</p>
+
+            <p>lorem23325</p>
+
+            <div id="yea">section b</div>
+        </>
+    )
+}
+
+export default About
