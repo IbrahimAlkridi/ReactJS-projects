@@ -2,6 +2,7 @@
     --bg-color: #32465a;
     --txt-color: #fff;
     --accent-color: #f2c94c;
+
 }
 
 /* ----------------------------
@@ -153,7 +154,6 @@
     /* 6px */
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
     /* 4px 8px */
-    padding: 0.5rem 0;
     /* 8px */
     min-width: 9.375rem;
     /* 150px */
@@ -163,20 +163,29 @@
     display: flex;
 }
 
-.nav-drop-menu-cat li:not(:last-child) {
+.nav-drop-menu-cat a:not(:last-child) {
     border-bottom: 0.0625rem solid silver;
     /* 1px */
 }
 
-.nav-drop-menu-cat li {
+.nav-drop-menu-cat a:last-child,
+.nav-drop-menu-cat a li {
+    margin-bottom: none;
+    padding-bottom: none;
+}
+
+.nav-drop-menu-cat a,
+.nav-drop-menu-cat a li {
     width: 100%;
+    cursor: pointer;
 }
 
-.nav-drop-menu-cat li:hover {
-    background-color: var(--accent-color);
+.nav-drop-menu-cat a li:hover {
+    color: var(--bg-color);
+    background: var(--accent-color);
 }
 
-.nav-drop-menu-cat li a {
+.nav-drop-menu-cat a li {
     color: var(--txt-color);
     text-decoration: none;
     text-align: start;

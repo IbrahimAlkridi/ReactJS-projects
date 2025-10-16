@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: none;
+}
 
 
 .header-nav {
@@ -18,5 +25,5 @@
 }
 
 .content {
-    padding: 50px;
+    padding: 100px;
 }

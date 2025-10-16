@@ -1,0 +1,174 @@
+.footer {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #32465A;
+    color: aliceblue;
+}
+
+.f-sub-footer-cols-section {
+    width: 100%;
+    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: .75rem;
+}
+
+.f-subs-section,
+.f-nav-section-col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.f-subs-section {
+    padding: .5rem 1.rem;
+    margin-right: auto;
+    min-width: 90px;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-subs-section button {
+    padding: .5rem 1rem;
+    background-color: #6E8FAF;
+    border-radius: 999px;
+    color: aliceblue;
+
+}
+
+.f-subs-section button:hover {
+    background-color: #f2c94c;
+}
+
+.f-subs-section h2 {
+    min-width: 80px;
+    font-size: 1.2rem;
+}
+
+.f-subs-section p {
+    padding: 0 .5rem;
+    min-width: 80px;
+    font-size: .75rem;
+}
+
+
+
+
+.f-nav-section-col {
+    padding: 0 .75rem;
+}
+
+.f-nav-section-col h4 {
+    margin-bottom: .5rem;
+    color: #7797bd
+}
+
+.f-nav-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: .35rem;
+}
+
+.f-nav-links li,
+.f-nav-links a {
+    width: 100%;
+    cursor: pointer;
+    font-size: .75rem;
+    color: inherit;
+}
+
+.f-nav-links li:hover {
+    translate: 2px;
+}
+
+
+
+.f-bottom-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid silver;
+}
+
+.f-bottom-bar p {
+    font-size: .75rem;
+}
+
+
+
+.f-social-links ul {}
+
+.f-social-links ul li {
+    display: inline-block;
+    padding: .65rem;
+    font-size: .85rem;
+    cursor: pointer;
+
+}
+
+.f-social-links ul li:hover {
+    scale: 1.1;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* PHONE SCREEN */
+
+@media (max-width:500px) {
+
+
+    .footer {
+        padding: 1rem;
+    }
+
+    .f-sub-footer-cols-section {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 1rem;
+    }
+
+
+
+    .f-nav-section-col {
+        margin-top: 1.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f-nav-section-col li {
+        text-align: center;
+    }
+
+    .f-subs-section {
+        margin: 0;
+    }
+
+    .f-subs-section p {
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .f-bottom-bar {
+        flex-direction: column-reverse;
+    }
+}

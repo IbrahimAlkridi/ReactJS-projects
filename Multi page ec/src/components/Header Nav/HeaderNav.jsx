@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './headerNav.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo.png";
 
 const HeaderNav = () => {
     const [lang, setLang] = useState('🇺🇸 English');
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [isCatOpen, setIsCatOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     // toggle dropdowns
     const toggleLangMenu = () => setIsLangOpen(prev => !prev);
@@ -17,6 +19,7 @@ const HeaderNav = () => {
         setLang(selectedLang);
         setIsLangOpen(false);
     };
+
 
     return (
         <div id='top-header'>
@@ -54,10 +57,18 @@ const HeaderNav = () => {
                             Categories <span>▼</span>
                         </button>
                         <ul className={`nav-drop-menu-cat ${isCatOpen ? 'active' : ''}`}>
-                            <li><NavLink to="/shop#jewelery">Jewelery</NavLink></li>
-                            <li><NavLink to="/shop#silver">Silver</NavLink></li>
-                            <li><NavLink to="/shop#dress">Dress</NavLink></li>
-                            <li><NavLink to="/shop#access">Accessories</NavLink></li>
+                            <NavLink to="/shop#jewelery">
+                                <li>Jewelery</li>
+                            </NavLink>
+                            <NavLink to="/shop#silver">
+                                <li>Silver</li>
+                            </NavLink>
+                            <NavLink to="/shop#dress">
+                                <li>Dress</li>
+                            </NavLink>
+                            <NavLink to="/shop#access">
+                                <li>Accessories</li>
+                            </NavLink>
 
                         </ul>
                     </li>
@@ -66,7 +77,7 @@ const HeaderNav = () => {
                     <NavLink to='/about'><li>About</li></NavLink>
                 </ul>
 
-                <button className='shop-now-btn'>Shop Now!</button>
+                <button className='shop-now-btn' onClick={() => { navigate('/shop') }} >Shop Now!</button>
             </div>
 
         </div>

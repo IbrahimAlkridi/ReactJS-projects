@@ -1,17 +1,19 @@
 import React from 'react'
-import './mainLayout.css';
 import { NavLink, Outlet } from 'react-router-dom';
 import HeaderNav from '../components/Header Nav/HeaderNav';
-
+import './mainLayout.css';
+import Footer from '../components/Footer/Footer.jsx';
 const MainLayout = () => {
     return (
         <div className='layout'>
             <HeaderNav />
 
-            <div className='content'>
+            <div className="content">
+
                 <Outlet />
             </div>
 
+            <Footer />
         </div>
     )
 }
