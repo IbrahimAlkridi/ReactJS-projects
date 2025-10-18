@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './headerNav.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import logo from "../../assets/logo.png";
 
 const HeaderNav = () => {
     const [lang, setLang] = useState('🇺🇸 English');

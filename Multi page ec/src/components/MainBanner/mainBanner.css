@@ -1,0 +1,84 @@
+:root {
+    --bg-color: #32465a;
+    --txt-color: #fff;
+    --accent-color: #f2c94c;
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* You can adjust this to the desired height */
+    background-image: url('https://thumbs.dreamstime.com/b/generated-image-stunning-bridal-boutique-showcasing-elegant-wedding-dresses-exquisite-sunlit-setting-luxurious-decor-383240209.jpg');
+
+    background-size: cover;
+    /* Ensures the image covers the whole container */
+    background-position: center center;
+    /* Centers the background image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* color: var(--bg-color); */
+    color: #fff;
+    /* Text color to contrast with the image */
+    padding: 1.5remd;
+
+}
+
+.sub-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.75rem;
+}
+
+.sub-banner h1 {
+    text-shadow: 2px 4px 3px #32465a;
+
+    font-size: 2rem;
+}
+
+.sub-banner p {
+    text-shadow: 1px 2px 1px #32465a;
+
+}
+
+.sub-banner h1,
+.sub-banner p {
+    max-width: 600px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sub-banner button {
+    padding: .75rem;
+    border-radius: 6px;
+    color: var(--bg-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.sub-banner button:hover {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+
+    .banner {
+        background-position-x: 0px;
+    }
+
+    .sub-banner button {
+        width: 200px;
+    }
+}
