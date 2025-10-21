@@ -1,0 +1,17 @@
+.swiper-slide {}
+
+.trend-section {
+    /* padding: .75rem 1.5rem; */
+}
+
+.trend-header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.trend-header h1 {
+    font-size: 2rem;
+}
+
+
+@media (max-width: 700px) {}

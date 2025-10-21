@@ -1,0 +1,14 @@
+
+HOME PAGE: 
+header nav bar 
+Main Banner background img, title and "Explore" button 
+Trend SWiper Section 
+Testimonials & Our Services 
+AUTH 
+F&Q
+Footer 
+
+CONTACT PAGE: 
+A single form with inputs name,email,message and the send button 
+
+SHOP PAGE: 
