@@ -1,7 +1,10 @@
-.swiper-slide {}
-
 .trend-section {
-    /* padding: .75rem 1.5rem; */
+    padding: 1rem 0;
+}
+
+.error {
+    text-align: center;
+    color: red;
 }
 
 .trend-header {

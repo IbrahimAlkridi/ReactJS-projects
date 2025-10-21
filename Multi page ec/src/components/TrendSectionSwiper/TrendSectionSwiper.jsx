@@ -3,7 +3,7 @@ import './trendSectionSwiper.css';
 import Card from '../Card/Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import useFetchData from '../../hooks/useFetchData';
 // Import Swiper styles (if not already done globally)
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,23 +11,26 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const TrendSection = () => {
-    const [tDresses, setDresses] = useState([]);
+    const { data, loading, error } = useFetchData('/dress_data.json');
 
-    useEffect(() => {
-        const fetchTrendDress = async () => {
-            try {
-                // ✅ Make sure file is in /public folder and use absolute path
-                const resp = await fetch('/dress_data.json');
-                if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
-                const data = await resp.json();
-                setDresses(data);
-            } catch (error) {
-                console.error("Error in fetching:", error);
-            }
-        };
+    if (loading) {
+        return (
+            <div className="trend-section loading">
+                <h1>Trend Section</h1>
+                <p>Loading dresses...</p>
+            </div>
+        );
+    }
 
-        fetchTrendDress();
-    }, []);
+    // 🔸 Handle error state
+    if (error) {
+        return (
+            <div className="trend-section error">
+                <h1>Trend Section</h1>
+                <p>Failed to load dresses. Please try again later.</p>
+            </div>
+        );
+    }
 
     return (
         <div className="trend-section">
@@ -38,25 +41,27 @@ const TrendSection = () => {
             <div className="trend-swiper">
                 <Swiper
                     modules={[Navigation, A11y]}   // ✅ removed Scrollbar module
-                    spaceBetween={2}
-                    slidesPerView={2}
+                    spaceBetween={3}
+                    slidesPerView={4}
                     slidesPerGroup={1}
                     navigation                     // ✅ keep arrows
-                    loop={true}                    // ✅ loop through slides
+                    loop={false}                    // ✅ loop through slides
                     breakpoints={{
                         0: { slidesPerView: 1 },     // 👶 mobile
-                        500: { slidesPerView: 2 },   // 📱 tablet
-                        1024: { slidesPerView: 2 },  // 💻 desktop
+                        700: { slidesPerView: 2 },
+                        1000: { slidesPerView: 3 },    // 📱 tablet
+                        1224: { slidesPerView: 4 },  // 💻 desktop
                     }}
                     onSwiper={(swiper) => console.log('Swiper initialized:', swiper)}
                     onSlideChange={() => console.log('Slide changed')}
                 >
-                    {tDresses.map((dress) => (
+                    {data.map((dress) => (
                         <SwiperSlide key={dress.id}>
                             <Card
                                 dressName={dress.name}
                                 price={dress.price}
                                 img={dress.image}
+                                id={dress.id}
                             />
                         </SwiperSlide>
                     ))}

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Elif K.",
+        "location": "Istanbul, Türkiye",
+        "image": "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
+        "message": "Rüya made my wedding dress beyond perfect! Every detail was handcrafted exactly as I imagined. I felt like a real-life princess.",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "name": "Sara M.",
+        "location": "Doha, Qatar",
+        "image": "client2.jpg",
+        "message": "The team at Rüya was so kind and professional. They helped me choose the perfect fabric and design for my evening gown. Truly luxurious experience.",
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "name": "Amina L.",
+        "location": "Dubai, UAE",
+        "image": "client3.jpg",
+        "message": "From the first consultation to the final fitting, everything was flawless. The craftsmanship and attention to detail are unmatched!",
+        "rating": 4.8
+    },
+    {
+        "id": 4,
+        "name": "Nora T.",
+        "location": "London, UK",
+        "image": "client4.jpg",
+        "message": "My bridesmaid dresses turned out stunning. The colors and fit were perfect for each of my friends. I couldn’t be happier!",
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "name": "Leyla A.",
+        "location": "Ankara, Türkiye",
+        "image": "client5.jpg",
+        "message": "Excellent service and beautiful designs. I ordered a custom dress for a special event, and it exceeded my expectations.",
+        "rating": 4.9
+    },
+    {
+        "id": 6,
+        "name": "Maya R.",
+        "location": "Paris, France",
+        "image": "client6.jpg",
+        "message": "Every moment in my Rüya gown felt magical. I’ve never worn something so elegant and comfortable at the same time!",
+        "rating": 5
+    }
+]

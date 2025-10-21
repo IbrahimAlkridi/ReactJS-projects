@@ -43,14 +43,16 @@
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .service-grid {
         grid-template-columns: 300px 300px;
         grid-template-rows: 300px 300px;
+        row-gap: 1.5rem;
+
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .service-grid {
         grid-template-columns: 250px;
         grid-template-rows: 250px 250px 250px 250px;
